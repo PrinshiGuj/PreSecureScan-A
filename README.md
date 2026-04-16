@@ -67,10 +67,17 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 python3 run.py
+
 <img width="1346" height="595" alt="deshbord photo" src="https://github.com/user-attachments/assets/8fe44c83-482a-4e4e-ae44-ebf15230cf40" />
+
 <img width="1345" height="598" alt="scani photo" src="https://github.com/user-attachments/assets/b27ae8e5-e6b7-43f1-8877-aaec746207aa" />
+
 <img width="1350" height="599" alt="resualt photo" src="https://github.com/user-attachments/assets/58995880-eb4b-45c9-9ea4-854fd0e3d579" />
-<img width="1346" height="595" alt="deshbord photo" src="https://github.com/user-attachments/assets/46c6aa5e-9878-4281-b246-9cf5ee617350" />
+
+<img width="1345" height="530" alt="resualt 0 2" src="https://github.com/user-attachments/assets/148531a0-76ba-41a2-9a32-180606b0de61" />
+
+<img width="1335" height="456" alt="resualt 0 3" src="https://github.com/user-attachments/assets/aeb9df69-0fa5-4afc-a368-f5b5b4d0ad82" />
+
 
 ### Prerequisites
 ```bash
