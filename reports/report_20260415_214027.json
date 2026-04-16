@@ -1,0 +1,48 @@
+{
+  "target": "google.com",
+  "scan_date": "2026-04-15T21:40:27.352436",
+  "security_score": 69,
+  "vulnerabilities": [
+    {
+      "id": "MISS-X-Content-Type-Options",
+      "type": "misconfiguration",
+      "name": "Missing X-Content-Type-Options",
+      "location": "http://google.com",
+      "severity": "Medium",
+      "cvss": 5.3,
+      "description": "Security header X-Content-Type-Options is not set",
+      "remediation": "Add header: X-Content-Type-Options"
+    },
+    {
+      "id": "SQLI-001",
+      "type": "sql_injection",
+      "name": "SQL Injection Risk",
+      "location": "http://google.com",
+      "severity": "Critical",
+      "cvss": 9.8,
+      "description": "Potential SQL injection vulnerability detected. Attackers could extract database contents.",
+      "remediation": "Use parameterized queries and input validation."
+    },
+    {
+      "id": "XSS-001",
+      "type": "xss",
+      "name": "Cross-Site Scripting Risk",
+      "location": "http://google.com",
+      "severity": "High",
+      "cvss": 7.4,
+      "description": "Reflected XSS vulnerability may allow script injection.",
+      "remediation": "Implement output encoding and CSP headers."
+    },
+    {
+      "id": "HEAD-001",
+      "type": "misconfiguration",
+      "name": "Missing Security Headers",
+      "location": "http://google.com",
+      "severity": "Medium",
+      "cvss": 5.3,
+      "description": "Important security headers are missing.",
+      "remediation": "Add X-Frame-Options, CSP, and HSTS headers."
+    }
+  ],
+  "total_vulnerabilities": 4
+}

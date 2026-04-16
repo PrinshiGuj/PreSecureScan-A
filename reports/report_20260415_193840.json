@@ -1,0 +1,12 @@
+{
+  "scan_info": {
+    "tool": "PreSecureScan A",
+    "version": "2.0.0",
+    "target": "testphp.vulnweb.com",
+    "scan_date": "2026-04-15T19:38:40.008472",
+    "total_vulnerabilities": 0
+  },
+  "vulnerabilities": [],
+  "fixes": [],
+  "security_score": 100
+}

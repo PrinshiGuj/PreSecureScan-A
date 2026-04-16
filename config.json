@@ -1,0 +1,16 @@
+{
+    "app_name": "PreSecureScan A",
+    "version": "2.0.0",
+    "scan_timeout": 30,
+    "max_threads": 50,
+    "enable_ai_fix": true,
+    "report_formats": ["json", "pdf", "html"],
+    "security_headers": [
+        "X-Frame-Options",
+        "X-Content-Type-Options", 
+        "X-XSS-Protection",
+        "Content-Security-Policy",
+        "Strict-Transport-Security",
+        "Referrer-Policy"
+    ]
+}

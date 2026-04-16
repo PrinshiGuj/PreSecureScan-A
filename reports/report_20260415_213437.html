@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PreSecureScan A - Security Report</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 20px; background: #f0f0f0; }
+        .container { max-width: 1000px; margin: auto; background: white; border-radius: 10px; padding: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 10px; text-align: center; }
+        .score { font-size: 48px; font-weight: bold; text-align: center; margin: 20px 0; }
+        .score-value { font-size: 72px; color: #667eea; }
+        .summary { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; margin: 20px 0; }
+        .summary-card { background: #f8f9fa; padding: 15px; border-radius: 10px; text-align: center; }
+        .critical { color: #dc3545; }
+        .high { color: #fd7e14; }
+        .medium { color: #ffc107; }
+        .low { color: #28a745; }
+        .vuln-card { border: 1px solid #ddd; margin: 15px 0; padding: 20px; border-radius: 10px; background: #fafafa; }
+        .vuln-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .severity-badge { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+        .severity-critical { background: #dc3545; color: white; }
+        .severity-high { background: #fd7e14; color: white; }
+        .severity-medium { background: #ffc107; color: black; }
+        .severity-low { background: #28a745; color: white; }
+        .fix-code { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 8px; overflow-x: auto; font-family: monospace; font-size: 12px; }
+        .mitigation { background: #e8f5e9; padding: 15px; border-radius: 8px; border-left: 4px solid #4caf50; margin: 10px 0; }
+        h2 { color: #333; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+        h3 { color: #555; margin-top: 10px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #667eea; color: white; }
+        .footer { text-align: center; margin-top: 30px; padding: 20px; color: #888; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 PreSecureScan A - Security Assessment Report</h1>
+            <p>Target: google.com</p>
+            <p>Target Type: WEBSITE</p>
+            <p>Scan Date: 2026-04-15 21:34:37</p>
+        </div>
+        
+        <div class="score">
+            <div>Security Score</div>
+            <div class="score-value">54/100</div>
+        </div>
+        
+        <div class="summary">
+            <div class="summary-card"><strong>Critical</strong><br><span class="critical" style="font-size: 24px;">2</span></div>
+            <div class="summary-card"><strong>High</strong><br><span class="high" style="font-size: 24px;">1</span></div>
+            <div class="summary-card"><strong>Medium</strong><br><span class="medium" style="font-size: 24px;">2</span></div>
+            <div class="summary-card"><strong>Low</strong><br><span class="low" style="font-size: 24px;">0</span></div>
+            <div class="summary-card"><strong>Total</strong><br><span style="font-size: 24px;">5</span></div>
+        </div>
+        
+        <h2>📋 Executive Summary</h2>
+        <p>This report presents the security assessment findings for <strong>google.com</strong>. A total of <strong>5</strong> vulnerabilities were identified during the scan. The overall security score is <strong>54/100</strong>, indicating MEDIUM RISK.</p>
+        
+        <h2>🛡️ Vulnerabilities Found</h2>
+
+        <div class="vuln-card">
+            <div class="vuln-header">
+                <h3>SQL Injection Detected</h3>
+                <span class="severity-badge severity-critical">Critical</span>
+            </div>
+            <p><strong>ID:</strong> SQLI-REAL</p>
+            <p><strong>CVSS Score:</strong> 9.8</p>
+            <p><strong>Location:</strong> http://google.com/search?q='</p>
+            <p><strong>Description:</strong> SQL injection confirmed with payload: '</p>
+            
+            <div class="mitigation">
+                <strong>🔧 Mitigation Strategy:</strong><br>
+                Use prepared statements immediately!
+            </div>
+        </div>
+
+        <div class="vuln-card">
+            <div class="vuln-header">
+                <h3>Missing X-Content-Type-Options</h3>
+                <span class="severity-badge severity-medium">Medium</span>
+            </div>
+            <p><strong>ID:</strong> MISS-X-Content-Type-Options</p>
+            <p><strong>CVSS Score:</strong> 5.3</p>
+            <p><strong>Location:</strong> http://google.com</p>
+            <p><strong>Description:</strong> Security header X-Content-Type-Options is not set</p>
+            
+            <div class="mitigation">
+                <strong>🔧 Mitigation Strategy:</strong><br>
+                Add header: X-Content-Type-Options
+            </div>
+        </div>
+
+        <div class="vuln-card">
+            <div class="vuln-header">
+                <h3>SQL Injection Risk</h3>
+                <span class="severity-badge severity-critical">Critical</span>
+            </div>
+            <p><strong>ID:</strong> SQLI-001</p>
+            <p><strong>CVSS Score:</strong> 9.8</p>
+            <p><strong>Location:</strong> http://google.com</p>
+            <p><strong>Description:</strong> Potential SQL injection vulnerability detected. Attackers could extract database contents.</p>
+            
+            <div class="mitigation">
+                <strong>🔧 Mitigation Strategy:</strong><br>
+                Use parameterized queries and input validation.
+            </div>
+        </div>
+
+        <div class="vuln-card">
+            <div class="vuln-header">
+                <h3>Cross-Site Scripting Risk</h3>
+                <span class="severity-badge severity-high">High</span>
+            </div>
+            <p><strong>ID:</strong> XSS-001</p>
+            <p><strong>CVSS Score:</strong> 7.4</p>
+            <p><strong>Location:</strong> http://google.com</p>
+            <p><strong>Description:</strong> Reflected XSS vulnerability may allow script injection.</p>
+            
+            <div class="mitigation">
+                <strong>🔧 Mitigation Strategy:</strong><br>
+                Implement output encoding and CSP headers.
+            </div>
+        </div>
+
+        <div class="vuln-card">
+            <div class="vuln-header">
+                <h3>Missing Security Headers</h3>
+                <span class="severity-badge severity-medium">Medium</span>
+            </div>
+            <p><strong>ID:</strong> HEAD-001</p>
+            <p><strong>CVSS Score:</strong> 5.3</p>
+            <p><strong>Location:</strong> http://google.com</p>
+            <p><strong>Description:</strong> Important security headers are missing.</p>
+            
+            <div class="mitigation">
+                <strong>🔧 Mitigation Strategy:</strong><br>
+                Add X-Frame-Options, CSP, and HSTS headers.
+            </div>
+        </div>
+
+        <h2>🔧 Auto-Fix Recommendations & Secure Code</h2>
+
+        <div class="vuln-card">
+            <h3>Fix for vulnerability</h3>
+            <p><strong>One-Click Fix:</strong> Replace all SQL queries with prepared statements</p>
+            <div class="fix-code">
+                <pre>
+# SECURE CODE - Prepared Statement
+$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->bind_param("i", $_GET['id']);
+$stmt->execute();
+</pre>
+            </div>
+        </div>
+
+        <div class="vuln-card">
+            <h3>Fix for vulnerability</h3>
+            <p><strong>One-Click Fix:</strong> Add security headers to server config</p>
+            <div class="fix-code">
+                <pre>
+# Apache .htaccess
+Header set X-Frame-Options "DENY"
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+</pre>
+            </div>
+        </div>
+
+        <div class="vuln-card">
+            <h3>Fix for vulnerability</h3>
+            <p><strong>One-Click Fix:</strong> Replace all SQL queries with prepared statements</p>
+            <div class="fix-code">
+                <pre>
+# SECURE CODE - Prepared Statement
+$stmt = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt->bind_param("i", $_GET['id']);
+$stmt->execute();
+</pre>
+            </div>
+        </div>
+
+        <div class="vuln-card">
+            <h3>Fix for vulnerability</h3>
+            <p><strong>One-Click Fix:</strong> Apply htmlspecialchars() to all outputs</p>
+            <div class="fix-code">
+                <pre>
+# SECURE CODE - Output Encoding
+echo htmlspecialchars($_GET['input'], ENT_QUOTES, 'UTF-8');
+</pre>
+            </div>
+        </div>
+
+        <div class="vuln-card">
+            <h3>Fix for vulnerability</h3>
+            <p><strong>One-Click Fix:</strong> Add security headers to server config</p>
+            <div class="fix-code">
+                <pre>
+# Apache .htaccess
+Header set X-Frame-Options "DENY"
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+</pre>
+            </div>
+        </div>
+
+        <h2>📊 Risk Matrix</h2>
+        <table>
+            <tr><th>Severity</th><th>Count</th><th>Risk Level</th><th>Action Required</th></tr>
+            <tr><td>Critical</td><td>2</td><td style="color: #dc3545;">Immediate Action</td><td>Fix within 24 hours</td></tr>
+            <tr><td>High</td><td>1</td><td style="color: #fd7e14;">Urgent</td><td>Fix within 1 week</td></tr>
+            <tr><td>Medium</td><td>2</td><td style="color: #ffc107;">Scheduled</td><td>Fix within 2 weeks</td></tr>
+            <tr><td>Low</td><td>0</td><td style="color: #28a745;">Informational</td><td>Fix within 1 month</td></tr>
+        </table>
+        
+        <div class="footer">
+            <p>Report generated by PreSecureScan A - Enterprise VAPT Platform</p>
+            <p>This report is confidential and intended for security assessment purposes only.</p>
+        </div>
+    </div>
+</body>
+</html>

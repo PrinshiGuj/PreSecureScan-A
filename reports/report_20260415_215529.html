@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><title>Security Report</title></head>
+<body>
+<h1>PreSecureScan A - Security Report</h1>
+<p>Target: google.com</p>
+<p>Score: 54/100</p>
+<h2>Vulnerabilities (5)</h2>
+
+<div style="border:1px solid #ddd; margin:10px; padding:10px">
+<h3>SQL Injection Detected</h3>
+<p>Severity: Critical</p>
+<p>Description: SQL injection confirmed with payload: '</p>
+<p>Remediation: Use prepared statements immediately!</p>
+</div>
+
+<div style="border:1px solid #ddd; margin:10px; padding:10px">
+<h3>Missing X-Content-Type-Options</h3>
+<p>Severity: Medium</p>
+<p>Description: Security header X-Content-Type-Options is not set</p>
+<p>Remediation: Add header: X-Content-Type-Options</p>
+</div>
+
+<div style="border:1px solid #ddd; margin:10px; padding:10px">
+<h3>SQL Injection Risk</h3>
+<p>Severity: Critical</p>
+<p>Description: Potential SQL injection vulnerability detected. Attackers could extract database contents.</p>
+<p>Remediation: Use parameterized queries and input validation.</p>
+</div>
+
+<div style="border:1px solid #ddd; margin:10px; padding:10px">
+<h3>Cross-Site Scripting Risk</h3>
+<p>Severity: High</p>
+<p>Description: Reflected XSS vulnerability may allow script injection.</p>
+<p>Remediation: Implement output encoding and CSP headers.</p>
+</div>
+
+<div style="border:1px solid #ddd; margin:10px; padding:10px">
+<h3>Missing Security Headers</h3>
+<p>Severity: Medium</p>
+<p>Description: Important security headers are missing.</p>
+<p>Remediation: Add X-Frame-Options, CSP, and HSTS headers.</p>
+</div>
+</body></html>

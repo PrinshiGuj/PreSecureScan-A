@@ -1,0 +1,91 @@
+{
+  "scan_info": {
+    "tool": "PreSecureScan A",
+    "version": "3.0",
+    "target": "google.com",
+    "target_type": "website",
+    "scan_date": "2026-04-15T21:34:37.538837",
+    "total_vulnerabilities": 5,
+    "security_score": 54
+  },
+  "vulnerabilities": [
+    {
+      "id": "SQLI-REAL",
+      "type": "sql_injection",
+      "name": "SQL Injection Detected",
+      "location": "http://google.com/search?q='",
+      "severity": "Critical",
+      "cvss": 9.8,
+      "description": "SQL injection confirmed with payload: '",
+      "remediation": "Use prepared statements immediately!"
+    },
+    {
+      "id": "MISS-X-Content-Type-Options",
+      "type": "misconfiguration",
+      "name": "Missing X-Content-Type-Options",
+      "location": "http://google.com",
+      "severity": "Medium",
+      "cvss": 5.3,
+      "description": "Security header X-Content-Type-Options is not set",
+      "remediation": "Add header: X-Content-Type-Options"
+    },
+    {
+      "id": "SQLI-001",
+      "type": "sql_injection",
+      "name": "SQL Injection Risk",
+      "location": "http://google.com",
+      "severity": "Critical",
+      "cvss": 9.8,
+      "description": "Potential SQL injection vulnerability detected. Attackers could extract database contents.",
+      "remediation": "Use parameterized queries and input validation."
+    },
+    {
+      "id": "XSS-001",
+      "type": "xss",
+      "name": "Cross-Site Scripting Risk",
+      "location": "http://google.com",
+      "severity": "High",
+      "cvss": 7.4,
+      "description": "Reflected XSS vulnerability may allow script injection.",
+      "remediation": "Implement output encoding and CSP headers."
+    },
+    {
+      "id": "HEAD-001",
+      "type": "misconfiguration",
+      "name": "Missing Security Headers",
+      "location": "http://google.com",
+      "severity": "Medium",
+      "cvss": 5.3,
+      "description": "Important security headers are missing.",
+      "remediation": "Add X-Frame-Options, CSP, and HSTS headers."
+    }
+  ],
+  "fixes": [
+    {
+      "fix_code": "\n# SECURE CODE - Prepared Statement\n$stmt = $conn->prepare(\"SELECT * FROM users WHERE id = ?\");\n$stmt->bind_param(\"i\", $_GET['id']);\n$stmt->execute();\n",
+      "one_click_fix": "Replace all SQL queries with prepared statements"
+    },
+    {
+      "fix_code": "\n# Apache .htaccess\nHeader set X-Frame-Options \"DENY\"\nHeader set X-Content-Type-Options \"nosniff\"\nHeader set X-XSS-Protection \"1; mode=block\"\n",
+      "one_click_fix": "Add security headers to server config"
+    },
+    {
+      "fix_code": "\n# SECURE CODE - Prepared Statement\n$stmt = $conn->prepare(\"SELECT * FROM users WHERE id = ?\");\n$stmt->bind_param(\"i\", $_GET['id']);\n$stmt->execute();\n",
+      "one_click_fix": "Replace all SQL queries with prepared statements"
+    },
+    {
+      "fix_code": "\n# SECURE CODE - Output Encoding\necho htmlspecialchars($_GET['input'], ENT_QUOTES, 'UTF-8');\n",
+      "one_click_fix": "Apply htmlspecialchars() to all outputs"
+    },
+    {
+      "fix_code": "\n# Apache .htaccess\nHeader set X-Frame-Options \"DENY\"\nHeader set X-Content-Type-Options \"nosniff\"\nHeader set X-XSS-Protection \"1; mode=block\"\n",
+      "one_click_fix": "Add security headers to server config"
+    }
+  ],
+  "statistics": {
+    "critical": 2,
+    "high": 1,
+    "medium": 2,
+    "low": 0
+  }
+}
