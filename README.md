@@ -79,6 +79,8 @@ Python 3.8 or higher
 pip package manager
 Git (optional)
 
+## **Image**
+
 <img width="1346" height="595" alt="deshbord photo" src="https://github.com/user-attachments/assets/9d7709df-6393-4d89-a394-b9b1c3aa6563" />
 <img width="1345" height="598" alt="scani photo" src="https://github.com/user-attachments/assets/6f9c2fcd-de97-4a3f-9031-42841fdf48fd" />
 <img width="1350" height="599" alt="resualt photo" src="https://github.com/user-attachments/assets/ebb9d633-777a-49a6-b2a5-41a963f66577" />
