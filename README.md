@@ -1,3 +1,4 @@
+<img width="1346" height="595" alt="deshbord photo" src="https://github.com/user-attachments/assets/8fe44c83-482a-4e4e-ae44-ebf15230cf40" />
 <img width="1345" height="598" alt="scani photo" src="https://github.com/user-attachments/assets/b27ae8e5-e6b7-43f1-8877-aaec746207aa" />
 <img width="1350" height="599" alt="resualt photo" src="https://github.com/user-attachments/assets/58995880-eb4b-45c9-9ea4-854fd0e3d579" />
 <img width="1346" height="595" alt="deshbord photo" src="https://github.com/user-attachments/assets/46c6aa5e-9878-4281-b246-9cf5ee617350" />
@@ -77,3 +78,11 @@ python3 run.py
 Python 3.8 or higher
 pip package manager
 Git (optional)
+<img width="1346" height="595" alt="deshbord photo" src="https://github.com/user-attachments/assets/9d7709df-6393-4d89-a394-b9b1c3aa6563" />
+<img width="1345" height="598" alt="scani photo" src="https://github.com/user-attachments/assets/6f9c2fcd-de97-4a3f-9031-42841fdf48fd" />
+<img width="1350" height="599" alt="resualt photo" src="https://github.com/user-attachments/assets/ebb9d633-777a-49a6-b2a5-41a963f66577" />
+<img width="1345" height="530" alt="resualt 0 2" src="https://github.com/user-attachments/assets/02ad2ec3-78d5-426f-b515-625a18ed5066" />
+<img width="1335" height="456" alt="resualt 0 3" src="https://github.com/user-attachments/assets/f044805e-a305-41d9-b327-23edb8a97ba1" />
+
+
+
