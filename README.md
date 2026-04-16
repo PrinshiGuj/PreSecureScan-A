@@ -32,7 +32,7 @@
 
 ## 🚀 Quick Start
 
-git clone https://github.com/yourusername/PreSecureScan-A.git
+git clone https://github.com/yourusername/PreSecureScan-A
 
 cd PreSecureScan-A
 
