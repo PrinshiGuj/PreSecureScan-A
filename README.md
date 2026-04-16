@@ -36,12 +36,38 @@ git clone https://github.com/yourusername/PreSecureScan-A.git
 
 cd PreSecureScan-A
 
+python -m venv venv
+venv\Scripts\activate
+
 pip install -r requirements.txt
 
 python run.py
 
 Open browser
 http://localhost:5000
+
+## **Linux/Mac Installation**
+
+# Ubuntu/Debian
+sudo apt update
+
+sudo apt install python3 python3-pip
+
+# macOS
+
+brew install python3
+
+git clone https://github.com/yourusername/PreSecureScan-A.git
+
+cd PreSecureScan-A
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+python3 run.py
+
 
 ### Prerequisites
 ```bash
