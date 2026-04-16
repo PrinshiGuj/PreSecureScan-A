@@ -32,6 +32,14 @@
 
 ## 🚀 Quick Start
 
+git clone https://github.com/yourusername/PreSecureScan-A.git
+cd PreSecureScan-A
+pip install -r requirements.txt
+python run.py
+
+Open browser
+http://localhost:5000
+
 ### Prerequisites
 ```bash
 Python 3.8 or higher
